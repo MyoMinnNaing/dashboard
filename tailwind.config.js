@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     // fontSize: {
@@ -12,9 +13,17 @@ export default {
     //   "4xl": "3.052rem",
     // },
     fontFamily: {
-      sans: ["Inter", "sans-serif"],
+      sans: ["Nunito", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      fontSize: {
+        normal: "17.5px",
+        medium: "22.5px",
+      },
+      colors: {
+        "light-gray": "rgb(107, 114, 128)",
+      },
+    },
   },
   plugins: [],
 };
