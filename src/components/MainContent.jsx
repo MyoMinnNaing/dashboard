@@ -4,6 +4,7 @@ import Header from "./Header";
 import { Route, Routes } from "react-router-dom";
 import { Sale } from "../pages/dashboard";
 import ThemeMode from "./ThemeMode";
+import { Todo } from "../pages";
 
 const MainContent = () => {
   const { activeMenu, setActiveMenu } = useContext(stateContext);
@@ -15,8 +16,12 @@ const MainContent = () => {
       <div className=" h-[100px]"></div>
       <div id="main-content" className=" min-h-screen">
         <Routes>
+          {/* Dashboard */}
           <Route path="/" element={<Sale />} />
           <Route path="/analytics" element="Analytics" />
+
+          {/* Apps */}
+          <Route path="/todo-list" element={<Todo />} />
         </Routes>
       </div>
     </div>
